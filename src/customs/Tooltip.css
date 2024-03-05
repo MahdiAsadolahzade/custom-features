@@ -1,0 +1,204 @@
+/* Tooltip.css */
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    width: auto;
+    min-width: 150px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip.top {
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tooltip.bottom {
+    top: 110%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+
+  
+  .tooltip.left {
+    right: 110%;
+    top: 50%;
+    transform: translateY(-50%); 
+  }
+  
+  .tooltip.right {
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%); 
+  }
+
+  .tooltip.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .tooltip.top-left {
+    bottom: 110%;
+    right: 50%;
+  }
+  
+  .tooltip.top-right {
+    bottom: 110%;
+    left: 50%;
+  }
+  
+  .tooltip.bottom-left {
+    top: 110%;
+    right:50%;
+  }
+  
+  .tooltip.bottom-right {
+    top: 110%;
+    left: 50%;
+  }
+  
+  .tooltip.bottom.arrow::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px;
+    border-color: transparent transparent #555 transparent;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Arrow برای موقعیت top */
+.tooltip.top.arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0;
+  border-color: #555 transparent transparent transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Arrow برای موقعیت left */
+.tooltip.left.arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #555;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+/* Arrow برای موقعیت right */
+.tooltip.right.arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #555 transparent transparent;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+}
+
+/* Arrow برای موقعیت center */
+.tooltip.center.arrow::before {
+ 
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 8px 8px;
+  border-color: #555;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Arrow برای موقعیت top-left */
+.tooltip.top-left.arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 0 8px;
+  border-color: #555 transparent transparent transparent;
+  top: 100%;
+  left: 75%;
+  transform: translateX(-50%);
+}
+
+/* Arrow برای موقعیت top-right */
+.tooltip.top-right.arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  border-color: #555 transparent transparent transparent;
+  top: 100%;
+  right: 75%;
+  transform: translateX(-50%);
+}
+
+/* Arrow برای موقعیت bottom-left */
+.tooltip.bottom-left.arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-color: transparent transparent #555 transparent;
+  bottom: 100%;
+  left: 75%;
+  transform: translateX(-50%);
+}
+
+/* Arrow برای موقعیت bottom-right */
+.tooltip.bottom-right.arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 0;
+  border-color: transparent transparent #555 transparent;
+  bottom: 100%;
+  right: 75%;
+  transform: translateX(-50%);
+}
