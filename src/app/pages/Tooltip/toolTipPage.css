@@ -1,0 +1,30 @@
+.tooltip-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .tooltip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .tooltip-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+  }
+  
+  .separator {
+    margin: 50px;
+  }
+  
