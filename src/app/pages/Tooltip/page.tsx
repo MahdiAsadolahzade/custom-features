@@ -28,8 +28,8 @@ const TryTooltip = (props: Props) => {
     "#3333FF",
   ];
 
-  const renderTooltipButtons = (position:any, arrow = false, bgColor:any) => (
-    <Tooltip key={position} text="this is an example" position={position} arrow={arrow} bgColor={bgColor}>
+  const renderTooltipButtons = (position:any, arrow = false, bgColor:string,arrowColor:string) => (
+    <Tooltip key={position} text="this is an example" position={position} arrow={arrow} bgColor={bgColor} arrowColor={arrowColor}>
       <button className="button">{position}</button>
     </Tooltip>
   );
@@ -37,23 +37,28 @@ const TryTooltip = (props: Props) => {
   return (
     <div className="page-container">
       <div className="grid-container">
-        {positions.map((position) => renderTooltipButtons(position,false,'#555'))}
+        {positions.map((position) => renderTooltipButtons(position,false,'#555','#555'))}
       </div>
 
       <div style={{ margin: "50px" }}>-------------------</div>
 
       <div className="grid-container">
-        {positions.map((position) => renderTooltipButtons(position, true,'#555'))}
+        {positions.map((position) => renderTooltipButtons(position, true,'#555','#555'))}
       </div>
 
       <div style={{ margin: "50px" }}>-------------------</div>
 
       <div className="grid-container">
         {positions.map((position, index) =>
-          renderTooltipButtons(position, true, colors[index])
+          renderTooltipButtons(position, true, colors[index],colors[index])
         )}
       </div>
+
+      
+
     </div>
+
+
   );
 };
 
