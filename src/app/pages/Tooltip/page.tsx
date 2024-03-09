@@ -29,7 +29,7 @@ const TryTooltip = (props: Props) => {
   ];
 
   const renderTooltipButtons = (position:any, arrow = false, bgColor:string,arrowColor:string) => (
-    <Tooltip key={position} text="this is an example" position={position} arrow={arrow} bgColor={bgColor} arrowColor={arrowColor}>
+    <Tooltip key={position} text="this is an example" position={position} arrow={arrow} bgColor={bgColor} arrowColor={arrowColor} displayDuration={2000}>
       <button className="button">{position}</button>
     </Tooltip>
   );

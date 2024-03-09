@@ -30,7 +30,7 @@ const Tooltip: React.FC<TooltipProps> = ({
   arrowColor,
 }) => {
   const arrowStyle: React.CSSProperties = {
-    '--arrow-color': arrowColor || '#555'
+    "--arrowColor": arrowColor || "#555",
   };
 
   return (
